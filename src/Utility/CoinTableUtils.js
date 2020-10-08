@@ -5,7 +5,7 @@
 export const coinInfoToRows = (coins, currency) => {
     return coins.map((coin, index) => {
         // If a coin doesn't have data for the given currency
-        if (coin["RAW"] == undefined) {
+        if (coin["RAW"] === undefined) {
             return {
                 id: index,
                 CoinName: coin.CoinInfo.Name,
