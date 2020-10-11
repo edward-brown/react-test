@@ -7,14 +7,14 @@
  * @param {Object} headers Request Headers
  */
 const httpRequest = async (method, url, data = null, headers = {}) => {
-    var result = await fetch(url, {
-        method,
-        headers,
-        body: data ? JSON.stringify(data) : undefined,
-    });
+	var result = await fetch(url, {
+		method,
+		headers,
+		body: data ? JSON.stringify(data) : undefined,
+	});
 
-    result.data = await result.json();
-    return result;
+	result.data = await result.json();
+	return result;
 };
 
 /**
@@ -22,6 +22,6 @@ const httpRequest = async (method, url, data = null, headers = {}) => {
  *
  * @param {String} url Request Url
  */
-export const get = async (url) => {
-    return await httpRequest("GET", url);
+export const get = async url => {
+	return await httpRequest("GET", url);
 };
