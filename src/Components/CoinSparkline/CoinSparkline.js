@@ -14,7 +14,7 @@ const CoinSparkline = ({ coin, graphData, ...props }) => {
 					datasets: [
 						{
 							data: graphData.data.map(d => d.open),
-							backgroundColor: randomColor({ format: "rgba", alpha: 0.3 }),
+							backgroundColor: "rgba(0, 0, 0, 0)",
 						},
 					],
 				},
@@ -25,7 +25,8 @@ const CoinSparkline = ({ coin, graphData, ...props }) => {
 					},
 					elements: {
 						line: {
-							borderWidth: 1,
+							borderColor: randomColor({ format: "rgba", alpha: 0.8 }),
+							borderWidth: 3,
 						},
 						point: {
 							radius: 0,
